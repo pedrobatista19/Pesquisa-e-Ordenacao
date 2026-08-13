@@ -1,0 +1,71 @@
+ === Shake Sort ===
+- É uma tentativa de melhorar o método Bubble Sort
+- Estável (Mantém a ordem original dos elementos que possuem o mesmo valor)
+- Memória Interna
+- A estrutura possui 3 partes/porções, a 1ª é ordenada pelos menores, a 2ª é desordenada e a 3ª é a ordenada pelos maiores -- Formato pirâmide invertida
+
+Basicamente é a aplicação do método bubble da esquerda pra direita e depois da direita pra esquerda
+
+Usos Viáveis (Semelhante ao Bubble) :
+
+- Estruturas totalmente ou quase ordenadas
+- Vetores pequenos
+
+RESUMINDO :
+
+- O que é: Uma variação que melhora o Bubble Sort tradicional
+
+- Como funciona: Percorre a lista em ambas as direções a cada ciclo.
+
+- Ida: Move-se da esquerda para a direita para empurrar o maior elemento restante ao final.
+
+- Volta: Retorna da direita para a esquerda trazendo o menor elemento para o início.
+
+- Benefício: O movimento de vai e vem aproxima os extremos e resolve o problema dos números pequenos travados no fim
+
+** Diferença entre o Shake e o Bubble **
+
+O Bubble Sort só vai da esquerda para a direita e move apenas os grandes.
+O Shake Sort vai e volta nas duas direções, movendo os grandes na ida e os pequenos na volta, o que o torna mais rápido na prática
+
+
+
+=========================================
+
+
+# Anotando pois não vim na aula que teve sobre o Bubble
+
+** Funcionamento Bubble **
+
+- Em um vetor com 9 posições, ele verifica a primeira posição com a segunda, caso o primeiro valor seja maior que o segundo ele troca os dois de posição, por exemplo:
+
+1 6 3 8 9 2
+
+- Verifica se 1>6 , oque é falso logo ele não troca de posição e passa pra próxima avaliação
+- Verifica se 6>3 , o qual é verdadeiro então o 6 troca de posição com o 3, ficando assim :
+
+1 3 6 8 9 2
+
+assim sucessivamente até o restante do vetor estar ordenado corretamente
+
+
+=== código em python do método bubble ===
+
+def bubble_sort(lista):
+    n = len(lista)
+    # Primeiro loop passa por todos os elementos
+    for i in range(n):
+        trocou = False
+        # Segundo loop compara os elementos vizinhos
+        for j in range(0, n - i - 1):
+            if lista[j] > lista[j + 1]:
+                # Troca os elementos de posição
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+                trocou = True
+        # Se não houve troca, a lista já está ordenada
+        if not trocou:
+            break
+    return lista
+
+
+=========================================
