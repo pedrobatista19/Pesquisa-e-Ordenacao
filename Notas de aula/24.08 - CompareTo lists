@@ -1,0 +1,70 @@
+AULA 09
+=== Código em JAVA ===
+# (existe uma classe com objeto Pessoa, com constructor, getters, setters, equals, hash e compareTo)
+import java.util.ArrayList
+import java.util.list
+import java.util.Collections
+
+public class Main{
+  public static void main(String[] args){
+    List<Pessoa> lista = new ArrayList<>();
+
+    lista.add(new Pessoa("Gabriel",19));
+    lista.add(new Pessoa("Alex",52));
+    lista.add(new Pessoa("Gabriel",20));
+
+# Como ele sabe por qual variável ordenar?
+# 1 - Utilizando o implements Comparable<Pessoa> na classe Pessoa
+# 2 - Coloca o método compareTo na classe Pessoa(
+#	public int compareTo(Pessoa o) {
+#		return this.nome.compareTo(o.getNome());
+
+    Collections.sort(lista);
+		system.out.printIn(lista);
+
+		lista.sort((p1,p2) > integer.compare(p2.getIdade(), p1.getIdade()));
+		System.out.printIn(lista.get (0));
+
+	}
+
+}
+=== FIM DO CÓDIGO EM JAVA ===
+
+=== CÓDIGO EM PYTHON ===
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    # 1 - Equivalente ao compareTo()
+    def __lt__(self, outra_pessoa):
+        return self.nome < outra_pessoa.nome
+
+    # Equivalente ao toString()
+    def __repr__(self):
+        return f"Pessoa(nome='{self.nome}', idade={self.idade})"
+
+lista = []
+
+lista.append(Pessoa("Gabriel", 19))
+lista.append(Pessoa("Alex", 52))
+lista.append(Pessoa("Gabriel", 20))
+
+# Ordena por ordem alfabética dos nomes
+lista.sort()
+print(lista)
+
+# 2 - Custom sort usando lambda 
+lista.sort(key=lambda p: p.idade, reverse=True)
+print(lista[0])
+
+=== FIM DO CÓDIGO EM PYTHON ===
+
+Avaliação dia 27/08
+
+- Qual a importancia da ordenação?
+- Oque são algoritmos de codificação simples e não simples?
+- Oque é ordenação estável e instável?
+- Qual o método que se controla para garantir que a lista seja ordenada pela primeira chave?
+- Como tu sabe que x algoritmo tem mais complexidade que o y em ordenação? ou melhor e pior complexidade?
