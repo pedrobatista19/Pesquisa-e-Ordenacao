@@ -1,0 +1,27 @@
+Revisão Avaliação 1 :
+
+HD/Disco = Memória Secundária
+RAM = Memória Principal
+
+1) Qual a diferença de ordenar por memória Principal e Secundária?
+R: A RAM ordena tudo ao mesmo tempo, já o HD ordena em partes. Então a secundária tem maior complexidade.
+
+2) Oque é estabilidade em ordenação?
+R: Se você tiver uma lista com vários itens com 2 variáveis(nome e idade) e ordenar ela primeiramente por nome e depois por idade, ela vai garantir que a ordem por nome não vai ser alterada na lista final
+
+3) Código de Comparable
+R: Primeiro espaço: Comparable | Segundo espaço: CompareTo | Terceiro espaço: -1 | Quarto espaço: +1 |
+
+4) Diferença dos métodos Bubble, Agitation e Comb Sort
+R: O Bubble Sort compara e troca vizinhos passo a passo de forma lenta; o Agitation Sort faz a mesma coisa, mas andando para a frente e para trás para agilizar; e o Comb Sort é o mais rápido porque começa comparando elementos distantes e vai diminuindo a distância até o fim.
+
+=========================================================
+
+
+
+
+
+
+
+
+
